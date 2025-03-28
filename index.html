@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>BTL Library</title>
+
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<main id="container">
+			<header>
+				<nav id="navigation">
+					<ul class="lhs">
+						<li class="menu">
+							<img width="52" src="assets/menu.svg" alt="menu-logo" />
+						</li>
+						<li>Books</li>
+						<li>Categories</li>
+						<li>Authors</li>
+					</ul>
+
+					<div class="logo">
+						<img
+							width="180"
+							src="assets/logo.png"
+							alt="blt library logo"
+						/>
+					</div>
+
+					<ul class="rhs">
+						<li>
+							<img
+								src="assets/search.svg"
+								width="18"
+								alt="search icon"
+							/>
+						</li>
+						<li>
+							<img src="assets/heart.svg" width="18" alt="heart icon" />
+						</li>
+						<li>
+							<img src="assets/user.svg" width="18" alt="user icon" />
+						</li>
+						<li>
+							<img src="assets/shop.svg" width="18" alt="shop icon" />
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<section id="intro">
+				<h2>Read, listen & discover</h2>
+				<div class="user-actions">
+					<button
+						onclick="displayDialog()"
+						class="add-btn btn"
+						type="button"
+					>
+						Add New Title
+					</button>
+					<!-- <button class="explore-btn btn" type="button">
+						Explore
+					</button> -->
+				</div>
+			</section>
+
+			<!-- dynamically populate with cards-->
+			<section id="carousel"></section>
+
+			<section id="cta">
+				<button onclick="showDialog()" type="button">
+					View All Books
+					<img
+						width="24"
+						style="display: inline-block"
+						src="assets/rigt-arrow.svg"
+						alt=""
+					/>
+				</button>
+			</section>
+		</main>
+
+		<!-- Add to Library Form  -->
+		<div id="dialog">
+			<div onclick="closeDialog() " class="cancel-btn">
+				<img src="assets/cancel.png" alt="" />
+			</div>
+			<div class="form-container">
+				<div class="lhs">
+					<div class="form-logo">
+						<img src="assets/form.logo.svg" alt="" />
+					</div>
+					<h2>
+						Add a book to <br />
+						your library collection
+					</h2>
+				</div>
+
+				<form id="libraryForm" class="rhs" action="">
+					<div class="form-top">
+						<!-- title -->
+						<div class="title-wrapper">
+							<label for="title"> Title:</label>
+							<input type="text" name="title" id="title" />
+						</div>
+
+						<!--author  -->
+						<div class="author-wrapper">
+							<label for="author"> Author:</label>
+							<input type="text" name="author" id="author" />
+						</div>
+
+						<!-- pages -->
+						<div class="pages-wrapper">
+							<label for="pages"> Pages:</label>
+							<input type="number" name="pages" id="pages" />
+						</div>
+					</div>
+
+					<!-- line -->
+					<div class="hr"></div>
+
+					<div class="form-bottom">
+						<!-- read status -->
+						<p>Have you read this book?</p>
+						<div class="read-status-wrapper">
+							<label for="yes">
+								<input type="radio" name="status" id="yes" />
+								Yes</label
+							>
+
+							<label for="no">
+								<input type="radio" name="status" id="no" />
+
+								No</label
+							>
+						</div>
+						<button onclick="" class="add-to-library-btn" type="submit">
+							Add to Library
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- view all books -->
+
+		<!-- <dialog>
+			<div onclick="cancelDialog()"
+			class="cancel-btn-wrapper">
+			<img
+		
+			src="assets/cancel.svg" alt="cancel.button">
+		</div>
+			<h1>Hello I'm a dialog box</h1>
+		</dialog> -->
+
+		<script src="script.js"></script>
+	</body>
+</html>
