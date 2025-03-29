@@ -239,6 +239,7 @@ article p {
 
 /* ||FORM  SECTION*/
 #dialog {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -413,7 +414,7 @@ body {
 }
 
 .form-container .lhs {
-	background-image: url(assets/form-bg.png);
+	background-image: url(../assets/form-bg.png);
 	background-size: cover;
 }
 
@@ -460,7 +461,8 @@ body {
 ACTIVE-STATES
 =============
 */
-input[type="text"]:focus,input[type="number"]:focus {
+input[type="text"]:focus,
+input[type="number"]:focus {
 	border-bottom: 2px solid var(--secondary-color-2);
 }
 
