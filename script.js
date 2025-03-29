@@ -51,15 +51,18 @@ function addBookToLibrary(title, author, pages, readStatus) {
  * Test for addBookToLibrary()
  * @param {*} params
  */
-addBookToLibrary("Atomic Habits", "James", 64, "yes");
-addBookToLibrary("Hello Tomorrow", "Sarah Jakes Roberts", 120, "yes");
-addBookToLibrary("GoodBye Yesterday", "James Brown", 600, "yes");
-addBookToLibrary("Hello Tomorrow", "James", 120, "NO");
-
-addBookToLibrary("Atomic Habits", "James", 64, "yes");
-addBookToLibrary("Hello Tomorrow", "Sarah Jakes Roberts", 120, "yes");
-addBookToLibrary("GoodBye Yesterday", "James Brown", 600, "yes");
-addBookToLibrary("Hello Tomorrow", "James", 120, "NO");
+addBookToLibrary("Atomic Habits", "James Clear", 320, "no");
+addBookToLibrary("Hello Tomorrow", "Cindy Trimm", 240, "yes");
+addBookToLibrary(
+	"7 Habits of Highly Effective People",
+	"Stephen R. Covey",
+	391,
+	"yes"
+);
+addBookToLibrary("Personal Success", "Brian Tracy", 127, "yes");
+addBookToLibrary("Goal Getters", "Nicole Crank", 107, "yes");
+addBookToLibrary("Ultra Learning", "Scott Young", 320, "yes");
+addBookToLibrary("Hi GOD, One More Thing", "Nicole Crank", 266, "yes");
 
 /**
  * Display Books List
@@ -188,6 +191,12 @@ form.addEventListener("submit", (event) => {
 // 	dialog.close();
 // }
 
-function changeReadStatus() {
-	alert("Hello");
+function displaySideNav() {
+	const sideNav = document.querySelector("aside");
+	sideNav.style.display = "block";
+}
+
+function closeSideNav() {
+	const sideNav = document.querySelector("aside");
+	sideNav.style.display = "none";
 }

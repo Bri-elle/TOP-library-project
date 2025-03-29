@@ -63,9 +63,8 @@ html {
 }
 
 body {
-	width: 100%;
-	/* min-height: 100vh; */
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 /*
@@ -92,8 +91,11 @@ header {
 	padding: 24px var(--side-padding) 0;
 }
 
+.logo {
+	width: 180px;
+}
+
 .menu {
-	/* width: 200px; */
 	padding-right: 16px;
 }
 
@@ -122,6 +124,15 @@ header #navigation {
 	align-items: center;
 }
 
+.mobile-menu {
+	display: none;
+}
+
+/* || SIDE-NAVIGATION  */
+aside {
+	display: none;
+}
+
 /* || Intro Section */
 
 #intro {
@@ -142,7 +153,7 @@ header #navigation {
 	border: 2px solid;
 	/* width: 80px; */
 	height: fit-content;
-	padding: 6px 12px;
+	padding: 12px 12px;
 	border-radius: 8px;
 }
 
@@ -163,14 +174,20 @@ header #navigation {
 	display: flex;
 	overflow: auto;
 	align-items: center;
+	display: grid;
+	grid-auto-flow: column;
+	grid-template-columns: repeat(auto-fill, 220px);
+	gap: var(--spacing-medium);
 }
 
 /*  */
 article {
 	position: relative;
-	min-width: 200px;
+	min-width: 220px;
+	width: 220px;
 	height: 250px;
-	margin-right: var(--spacing-medium);
+	padding: 0 10px;
+	/* margin-right: var(--spacing-medium); */
 	border: 5px solid var(--secondary-color-2);
 	display: flex;
 	flex-direction: column;
@@ -276,7 +293,7 @@ article p {
 form {
 	width: 50%;
 	display: grid;
-	flex-direction: column;
+	/* flex-direction: column; */
 	grid-template-columns: 100%;
 	grid-template-rows: 50% 50%;
 }
@@ -443,8 +460,8 @@ body {
 ACTIVE-STATES
 =============
 */
-input[type="text"]:focus {
-	border: 2px solid var(--secondary-color-2);
+input[type="text"]:focus,input[type="number"]:focus {
+	border-bottom: 2px solid var(--secondary-color-2);
 }
 
 article:hover .box {

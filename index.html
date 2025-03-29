@@ -6,6 +6,7 @@
 		<title>BTL Library</title>
 
 		<link rel="stylesheet" href="styles.css" />
+		<link rel="stylesheet" href="mobile.css" media="(max-width:768px)" />
 	</head>
 	<body>
 		<main id="container">
@@ -20,9 +21,9 @@
 						<li>Authors</li>
 					</ul>
 
-					<div class="logo">
+					<div>
 						<img
-							width="180"
+							class="logo"
 							src="assets/logo.png"
 							alt="blt library logo"
 						/>
@@ -47,7 +48,42 @@
 						</li>
 					</ul>
 				</nav>
+				<div onclick="displaySideNav()" class="mobile-menu">
+					<img width="32" src="/assets/menu-2.svg" alt="" />
+				</div>
 			</header>
+
+			<aside>
+				<div onclick="closeSideNav()" class="cancel-aside-btn">
+					<img src="assets/cancel.svg" alt="" />
+				</div>
+				<ul class="side-menu-top">
+					<li>
+						Search
+						<img src="assets/search.svg" width="18" alt="search icon" />
+					</li>
+					<li>
+						Favorites
+						<img src="assets/heart.svg" width="18" alt="heart icon" />
+					</li>
+					<li>
+						sigin in
+						<img src="assets/user.svg" width="18" alt="user icon" />
+					</li>
+					<li>
+						shop
+						<img src="assets/shop.svg" width="18" alt="shop icon" />
+					</li>
+				</ul>
+				<ul class="side-menu-bottom">
+					<li class="menu">
+						<img width="52" src="assets/menu.svg" alt="menu-logo" />
+					</li>
+					<li>Books</li>
+					<li>Categories</li>
+					<li>Authors</li>
+				</ul>
+			</aside>
 
 			<section id="intro">
 				<h2>Read, listen & discover</h2>
